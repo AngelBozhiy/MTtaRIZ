@@ -1,0 +1,50 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Lab3 {
+    public static void piramida(int kolvostrok)
+    {
+        int stroka = kolvostrok;
+        while (stroka > 0) 
+        {
+            String string = " ".repeat(stroka) +
+                    " *".repeat(Math.max(0, kolvostrok - stroka + 1));
+            System.out.print(string);
+            System.out.println();
+            stroka--;
+        }
+    }
+    public static void massiv(int chislo, int stolb, int strok)
+    {
+        chislo = chislo - 3;
+        int[][] massiv = new int[strok][stolb];
+        for(int i = 0; i < strok; i++)
+        {
+            for (int j = 0; j < stolb; j++)
+            {
+                chislo = chislo + 3;
+                massiv[i][j] = chislo;
+                System.out.printf("%4d" + " ", massiv[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args)
+    {
+        System.out.print("int kolvostrok = ");
+        Scanner scan = new Scanner(System.in);
+        int kolvostrok = scan.nextInt();
+        piramida(kolvostrok);
+
+        System.out.print("Nachalnoe chislo = ");
+        int chislo = scan.nextInt();
+
+        System.out.print("Kolvo stolbchov = ");
+        int stolb = scan.nextInt();
+
+        System.out.print("Kolvo strok = ");
+        int strok = scan.nextInt();
+        massiv(chislo, stolb, strok);
+        scan.close();
+    }
+}
