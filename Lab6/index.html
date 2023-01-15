@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+            <meta charset="utf-8">
+            <title>MyGame</title>
+    </head>
+    <style>
+            h1
+            {
+                text-align: center;
+            }
+            td 
+            {
+                
+                font-size: 40pt;
+                border-right: 3px solid; 
+                border-bottom: 3px solid;
+                border-top: 3px solid; 
+                border-left: 3px solid
+                
+            }
+    </style>
+    <body>
+            <h1>MyGame</h1>
+            <table style="margin-left: auto; margin-right: auto;">
+                <tr>
+                        <td><span th:utext="${variable1}"></span></td>
+                        <td><span th:utext="${variable2}"></span></td>
+                        <td><span th:utext="${variable3}"></span></td>
+                </tr>
+                <tr>
+                        <td><span th:utext="${variable4}"></span></td>
+                        <td><span th:utext="${variable5}"></span></td>
+                        <td><span th:utext="${variable6}"></span></td>
+                </tr>
+                <tr>
+                        <td><span th:utext="${variable7}"></span></td>
+                        <td><span th:utext="${variable8}"></span></td>
+                        <td><span th:utext="${variable9}"></span></td>
+                </tr>
+            </table>
+    </body>
+</html>
